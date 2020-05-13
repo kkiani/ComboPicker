@@ -4,7 +4,7 @@ import UIKit
 open class ComboPickerView: UITextField,UITextFieldDelegate {
     
     // MARK: - Global Variables
-    var dataSource = [String]()
+    public var dataSource = [String]()
     private var picker:UIPickerView = UIPickerView(frame: CGRect.zero)
     private let accessoryView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
     var Done:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
