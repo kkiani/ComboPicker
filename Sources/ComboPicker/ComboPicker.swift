@@ -68,6 +68,7 @@ extension ComboPickerView{
     public func selectItem(_ index: Int){
         guard index < dataSource.count else{return}
         text = dataSource[index]
+        sendActions(for: .editingDidEnd)
     }
     
     public func selectedItem() -> Int?{
@@ -93,6 +94,7 @@ extension ComboPickerView: UIPickerViewDelegate, UIPickerViewDataSource{
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard dataSource.count > row else{ return }
         self.text = dataSource[row]
+        self.sendActions(for: .valueChanged)
     }
 }
 #endif
